@@ -1,0 +1,120 @@
+                  
+                  <nav class="navbar navbar-default">
+                    <div class="container-fluid" >
+                      <div class="navbar-header pull-right">
+                        <button type="button" class="navbar-toggle " data-toggle="collapse" data-target="#myNavbar">
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>                        
+                        </button>
+                        
+                         
+                         <a  class="navbar-brand pull-right">
+                               <li style="list-style: none;" class="dropdown">
+                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" style="text-decoration: none;color: white;" aria-expanded="false">{{sname}} <span class="caret"></span></a>
+                                         <ul class="dropdown-menu">
+                                           <li><a href="#" ><span class="glyphicon glyphicon-user"></span> LogOut</a></li>
+                                         </ul>
+                                       </li>
+                             </a>
+                              <a [routerLink]="[{ outlets: { p:'profile',c:null,r:null,vi:null,m:null,an:null,pa:null} }]"   class="navbar-brand pull-right "ref="#"><span *ngIf="picUrl==null">
+                             
+                              <img src="./assets/systemImages/st.jpg" class="img img-circle" style="width: 50px;height: 45px;margin-top: -12px;" alt="">
+                              
+                              </span>
+                              <span *ngIf="picUrl!=null">
+                                                           
+                                                            <img src="{{picUrl}}" class="img img-circle" style="width: 50px;height: 45px;margin-top: -12px;" alt="">
+                                                            
+                                                            </span>
+                              </a>
+                      </div>
+                    
+                         
+                    </div>
+                    
+                  </nav>
+                  
+                         
+    
+                  
+                  <div class="container-fluid">
+                    <div class="row " >
+                            <div class="col-md-3 col-sm-8 col-xs-12 chooseShow " style="box-shadow: 0 0 5px 5px grey;">
+              <div class="nav"  >
+               <div class="list-group " id="myNavbar">
+               
+                   <h6 >
+                   <a [routerLink]="[{ outlets: { an:'annaucement',c:null,r:null,vi:null,p:null,m:null,pa:null} }]"  class="list-group-item active rem" >
+                       <span class="glyphicon glyphicon-camera"></span> annaucements
+                   </a>
+                   </h6>
+                   <h6>
+                 
+                   <a  [routerLink]="[{ outlets: { c: 'conceptNote',p:null,r:null,vi:null,pa:null,m:null,an:null} }]"  class="list-group-item active rem" >
+                       <span class="glyphicon glyphicon-file"></span> conceptNoteSubmission
+                   </a>
+
+                   </h6>
+                   
+                 
+                   <h6>
+                   <a [routerLink]="[{ outlets: { vi: 'viewSupervisors',c:null,r:null,pa:null,p:null,m:null,an:null} }]"  class="list-group-item active rem">
+                       <span class="glyphicon glyphicon-user"></span> view supervisor
+                   </a>
+                   </h6>
+                           <h6 >
+                            <a  [routerLink]="[{ outlets: { r: 'SubmitReport',c:null,pa:null,vi:null,p:null,m:null,vsr:null,an:null} }]" class="list-group-item active">
+                              <span class="glyphicon glyphicon-book"></span> Reports
+                            </a>
+
+                           </h6>
+                   
+                   <h6>
+                   <a [routerLink]="[{ outlets: { m: 'messages',pa:null,c:null,r:null,vi:null,p:null,an:null} }]" class="list-group-item active rem">
+                   <span class="glyphicon glyphicon-inbox "></span> messages
+                    <span class="badge badge-default badge-pill">{{messageLength}}</span>
+                   </a>
+                   </h6>
+                 <!--   <h6>
+                   <a  [routerLink]="[{ outlets: { v: 'pastProjects',c:null,r:null,vi:null,p:null,m:null,vsr:null,an:null} }]"  class="list-group-item active rem">
+                       <span class="glyphicon glyphicon-search"></span> view past reports
+                   </a>
+                   </h6> -->
+                   <h6>
+                   <a  [routerLink]="[{ outlets: { pa: 'projectArchive',c:null,r:null,vi:null,p:null,m:null,an:null} }]"  class="list-group-item active rem">
+                       <span class="glyphicon glyphicon-search"></span> projectsArchive
+                   </a>
+                   </h6>
+                   
+               </div>
+               </div>              
+
+                         </div>
+                         <div class="col-md-8 col-sm-12 col-xs-12 "  >
+                         
+
+                         
+                        <div style="overflow: auto;width: 795px">
+                         <router-outlet name="r"></router-outlet>
+                         </div>
+                         <!-- <router-outlet name="v"></router-outlet> -->
+                         <div style="overflow: auto;width: 795px;box-shadow:0 0 10px grey;">
+                         <router-outlet name="c"></router-outlet>
+                         </div>
+                         <div  style="overflow: auto;width: 795px;box-shadow:0 0 10px grey;">
+                           <router-outlet name="vi" ></router-outlet>
+                         </div>
+                         
+                         <router-outlet name="p"></router-outlet>
+                         <router-outlet name="m"></router-outlet>
+                         <router-outlet name="pa"></router-outlet>
+                         <router-outlet name="an"></router-outlet>
+                         
+                         </div>
+                         
+                         </div>
+                         </div>
+                         
+                   
+ 

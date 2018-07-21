@@ -1,0 +1,63 @@
+
+.chooseShow{
+	margin-left: 1.5%;
+	margin-right: 3%;
+
+
+}
+
+
+nav{
+	background-color: #337AB7;
+	text-decoration-color: white;
+	color: white;
+
+}
+#collapse1 li:hover{
+	
+	background-color: #66717a;
+		
+	
+
+}
+h6:hover{
+	
+	transform: scale(1.01);
+	box-shadow: 0 2px 5px 5px grey;
+	text-align: center;
+	font-size: 15px;
+
+}
+
+.dashD{
+	border: 2px groove blue;
+	margin-bottom: 5px;
+	height: 100px;
+
+}
+.dashD img{
+	height: 100%;
+	text-align: center;
+	
+	width: 100%;
+
+	
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+          transition:         transform .8s ease-in-out;
+           
+
+}
+.dashD img:hover{
+	 -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+ .pic{
+	 
+	 border: 1px solid red;
+	 overflow: scroll;
+}
+h6{
+	font-size: 15px;
+}
+
+

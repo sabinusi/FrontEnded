@@ -1,0 +1,160 @@
+
+                  <nav class="navbar navbar-default visible-lg">
+                    <div class="container-fluid">
+                    <div class="navbar-header">
+                      
+                        <a style="background-image: url('./../../assets/systemImages/coict logo.jpg'); background-size: cover; background-repeat: no-repeat;width: 100px;" class="navbar-brand"  ></a>
+                          
+                        <a  class="navbar-brand"> <h2 style="color: white;margin-top: -10px;" >
+                         
+                          <marquee behavior="slide" direction="left">FYPMS COORDINATOR DASHBOARD</marquee>
+                      </h2></a>
+
+                      
+                    </div>
+                    
+                      <div class="navbar-header pull-right">
+                        
+                        
+                         
+                         <a class="navbar-brand pull-right">
+                               <li style="list-style: none;" class="dropdown">
+                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" style="text-decoration: none;color: white;" aria-expanded="false">{{sname}} <span class="caret"></span></a>
+                                         <ul class="dropdown-menu">
+                                           <li><a href="#"><span class="glyphicon glyphicon-user"></span> LogOut</a></li>
+                                         </ul>
+                                       </li>
+                             </a>
+                              <a [routerLink]="[
+                           { outlets: { cp: 'profile',vc:null,vg:null,asg:null,pa:null,pA:null,ca:null,ct:null} }
+
+                          ]"  class="navbar-brand pull-right" >
+                        <span *ngIf="picUrl==null">
+                             
+                              <img src="./assets/systemImages/st.jpg" class="img img-circle" style="width: 50px;height: 45px;margin-top: -12px;" alt="">
+                              
+                        </span>
+                       <span *ngIf="picUrl!=null">
+                           
+                            <img src="{{picUrl}}" class="img img-circle" style="width: 50px;height: 45px;margin-top: -12px;" alt="">
+                                                            
+                      </span>
+ 
+
+                           </a>
+                              
+                      </div>
+                    
+                         
+                    </div>
+                    
+                  </nav>
+                  
+                           
+    
+                  
+<div class="container-fluid visible-lg" >
+    <div class="row ">
+          <!-- opening the first column of row -->
+          <div class="col-md-3 col-sm-8 col-xs-9 chooseShow" style="">
+                 <!-- navi start here -->
+                  <div class="nav">
+                       <div class="list-group ">
+                            <h6 id="first">
+                            <a  class="list-group-item  " [routerLink]="[
+                            { outlets: { ca: 'annaucement',vc:null,vg:null,asg:null,pa:null,cp:null,sb:null,ct:null} }
+
+                           ]" >
+                              annaucements
+                            </a>
+                            </h6>
+                           <h6 id="first">
+                           <a  class="list-group-item  " [routerLink]="[
+                           { outlets: { sb: 'view-submitedr-eport',vc:null,vg:null,asg:null,pa:null,ca:null,cp:null,ct:null} }
+
+                          ]" >
+                            viewSubmitedReport
+                           </a>
+                           </h6>
+                            <h6 id="first">
+                            <a  class="list-group-item  " [routerLink]="[
+                            { outlets: { vc: 'view-concept-note',sb:null,vg:null,asg:null,pa:null,ca:null,cp:null,ct:null} }
+
+                           ]" >
+                              viewRejectedConceptNote
+                            </a>
+                            </h6>
+
+                                      <h6>
+                                      <a [routerLink]="[
+                            { outlets: { vg: 'view-groups',sb:null,vc:null,asg:null,pa:null,ca:null,cp:null,ct:null} }
+
+                           ]" class="list-group-item ">
+                                  view assigned SupervisorToPanelGroups
+                                  </a>
+                                  </h6>
+                                     
+                                      <h6>
+                                      <a  [routerLink]="[
+                            { outlets: { asg: 'assign-group',sb:null,vc:null,vg:null,pa:null,ca:null,cp:null,ct:null} }
+
+                           ]" class="list-group-item ">
+                               
+                                assign supervisor to panelGroups
+                           </a>
+                                  </h6>   
+
+                            <h6 id="first">
+                            <a  class="list-group-item  " [routerLink]="[
+                            { outlets: { ct: 'control',sb:null,vg:null,asg:null,ca:null,cp:null,pa:null,vc:null} }
+
+                           ]" >
+                              <span class="pull-right glyphicon glyphicon-lock"></span>systeam control
+                            </a>
+                            </h6>
+                            <!-- systemcontrol -->
+                            <h6 id="first">
+                            <a  class="list-group-item  " [routerLink]="[
+                            { outlets: { pa: 'projectArchived',sb:null,vg:null,asg:null,ca:null,cp:null,ct:null} }
+
+                           ]" >
+                              <span class="pull-right glyphicon glyphicon-search"></span>  projectArchived
+                            </a>
+                            </h6>
+                           
+                         </div>
+                  </div>   
+                  <!-- navi start here ends-->
+                  
+
+           </div>
+           <!-- opening the first column of row -->
+           <div style="position: absolute;margin-top: 402px;margin-left: 10px;">
+             <img src="./../../assets/systemImages/header image.jpg" style="width: 312px;height: 120px;" class="img-thumbnail" alt="">
+           </div>
+            <div class="vl"></div>
+
+            <!-- opening second column of router_outlets -->
+           <div class="col-md-8 col-sm-12 col-xs-12 visible-lg"  >
+              <router-outlet name="sb"></router-outlet> 
+              <router-outlet name="vc"></router-outlet> 
+              <router-outlet name="vg"></router-outlet> 
+              <router-outlet name="asg"></router-outlet> 
+              <router-outlet name="pa"></router-outlet> 
+              <router-outlet name="cp"></router-outlet> 
+              <router-outlet name="ca"></router-outlet> 
+              <router-outlet name="ct"></router-outlet> 
+              
+              
+              
+              
+                  
+            </div>
+            <!-- closing second column of router_outlets -->             
+
+   </div>
+   <!-- row -->
+</div>
+<!-- contauner -->
+                         
+                   

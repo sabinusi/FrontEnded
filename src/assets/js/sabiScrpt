@@ -1,0 +1,15 @@
+$(document).ready(function(){
+    $('#simu').click(function() {
+
+            $('#ficha').removeClass('visible-md');
+        });
+    $('.rem').click(function () {
+    	$('#ficha').addClass('visible-md');
+    	
+    })
+     $('.nos').click(function () {
+    	$('.ask').remove();
+    	
+    })
+        
+})
